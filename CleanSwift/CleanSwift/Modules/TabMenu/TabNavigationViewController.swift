@@ -17,13 +17,11 @@ protocol TabNavigationDisplayLogic: class {
 }
 
 class TabNavigationViewController: UITabBarController {
-    struct ViewModel {
-    }
+    struct ViewModel { }
 	var interactor: TabNavigationBusinessLogic?
-	var router: (NSObjectProtocol & TabNavigationRoutingLogic & TabNavigationDataPassing)?
+	var router: (NSObjectProtocol & TabNavigationRoutingLogic)?
 
 	// MARK: Object lifecycle
-  
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     	super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     	setup()
@@ -35,7 +33,6 @@ class TabNavigationViewController: UITabBarController {
   	}
   
   	// MARK: Setup
-  
   	private func setup() {
 	    let viewController = self
     	let interactor = TabNavigationInteractor()
@@ -46,11 +43,9 @@ class TabNavigationViewController: UITabBarController {
     	interactor.presenter = presenter
     	presenter.viewController = viewController
     	router.viewController = viewController
-    	router.dataStore = interactor
     }
-  
-  
-  	// MARK: View lifecycle
+
+    // MARK: View lifecycle
   	override func viewDidLoad() {
    		super.viewDidLoad()
   	}
@@ -62,7 +57,6 @@ class TabNavigationViewController: UITabBarController {
     }
   
 	// MARK: Do something
-    
 	func initTabs() {
 		let request = TabNavigation.InitTabs.Request()
     	interactor?.initTabs(request: request)

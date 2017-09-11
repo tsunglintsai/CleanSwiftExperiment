@@ -16,13 +16,8 @@ import UIKit
     func initTabs()
 }
 
-protocol TabNavigationDataPassing {
-	var dataStore: TabNavigationDataStore? { get }
-}
-
 class TabNavigationRouter: NSObject {
 	weak var viewController: TabNavigationViewController?
-	var dataStore: TabNavigationDataStore?
     var viewControllers = [UIViewController]()
 }
 
@@ -38,14 +33,7 @@ extension TabNavigationRouter: TabNavigationRoutingLogic {
         viewControllers = [navigaionControllerForTab1, navigaionControllerForTab2]
         viewController?.viewControllers = viewControllers
         viewController?.tabBar.items?[0].title = "List"
-        viewController?.tabBar.items?[0].title = "Collection"
+        viewController?.tabBar.items?[1].title = "Collection"
     }
 }
 
-// MARK: Passing data
-extension TabNavigationRouter : TabNavigationDataPassing {
-  
-  	//func passDataToSomewhere(source: TabNavigationDataStore, destination: inout SomewhereDataStore) {
-	//  destination.name = source.name
-	//}
-}

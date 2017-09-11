@@ -27,4 +27,4 @@ class ItemDetailRouter: NSObject {
 extension ItemDetailRouter: ItemDetailRoutingLogic { }
 
 // MARK: Passing data
-extension ItemDetailRouter : ItemDetailDataPassing { }
+extension ItemDetailRouter: ItemDetailDataPassing { }

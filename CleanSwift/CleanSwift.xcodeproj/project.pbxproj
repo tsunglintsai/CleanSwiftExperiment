@@ -20,7 +20,6 @@
 		BA2344C11F66E97600EF8542 /* TabNavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */; };
 		BA2344C21F66E97600EF8542 /* TabNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BC1F66E97600EF8542 /* TabNavigationRouter.swift */; };
 		BA2344C31F66E97600EF8542 /* TabNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BD1F66E97600EF8542 /* TabNavigationViewController.swift */; };
-		BA2344C41F66E97600EF8542 /* TabNavigationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BE1F66E97600EF8542 /* TabNavigationWorker.swift */; };
 		BA6D32E81F65BCB800E9DFD0 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32E71F65BCB800E9DFD0 /* UserData.swift */; };
 		BA6D32EA1F65BD0D00E9DFD0 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32E91F65BD0D00E9DFD0 /* EntityManager.swift */; };
 		BA6D32EC1F65CA5D00E9DFD0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32EB1F65CA5D00E9DFD0 /* API.swift */; };
@@ -68,7 +67,6 @@
 		BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationPresenter.swift; sourceTree = "<group>"; };
 		BA2344BC1F66E97600EF8542 /* TabNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationRouter.swift; sourceTree = "<group>"; };
 		BA2344BD1F66E97600EF8542 /* TabNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationViewController.swift; sourceTree = "<group>"; };
-		BA2344BE1F66E97600EF8542 /* TabNavigationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationWorker.swift; sourceTree = "<group>"; };
 		BA6D32E71F65BCB800E9DFD0 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BA6D32E91F65BD0D00E9DFD0 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		BA6D32EB1F65CA5D00E9DFD0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 				BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */,
 				BA2344BC1F66E97600EF8542 /* TabNavigationRouter.swift */,
 				BA2344BD1F66E97600EF8542 /* TabNavigationViewController.swift */,
-				BA2344BE1F66E97600EF8542 /* TabNavigationWorker.swift */,
 			);
 			path = TabMenu;
 			sourceTree = "<group>";
@@ -181,8 +178,8 @@
 				BACFC4671F67029400CA4517 /* TrackCollectionPresenter.swift */,
 				BACFC4681F67029400CA4517 /* TrackCollectionRouter.swift */,
 				BACFC4691F67029400CA4517 /* TrackCollectionViewController.swift */,
-				BACFC4731F67034600CA4517 /* TrackCollectionViewCell.swift */,
 				BACFC4711F6702B200CA4517 /* TrackCollectionViewController.storyboard */,
+				BACFC4731F67034600CA4517 /* TrackCollectionViewCell.swift */,
 			);
 			path = TrackCollection;
 			sourceTree = "<group>";
@@ -375,7 +372,6 @@
 				BA074CD51F6631F00003A064 /* ItemDetailPresenter.swift in Sources */,
 				BA6D32EC1F65CA5D00E9DFD0 /* API.swift in Sources */,
 				BA074CD41F6631F00003A064 /* ItemDetailModels.swift in Sources */,
-				BA2344C41F66E97600EF8542 /* TabNavigationWorker.swift in Sources */,
 				BACFC4741F67034600CA4517 /* TrackCollectionViewCell.swift in Sources */,
 				BA2344C01F66E97600EF8542 /* TabNavigationModels.swift in Sources */,
 				BA2344C31F66E97600EF8542 /* TabNavigationViewController.swift in Sources */,

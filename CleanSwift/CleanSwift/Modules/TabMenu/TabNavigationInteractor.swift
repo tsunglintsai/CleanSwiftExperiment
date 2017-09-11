@@ -20,7 +20,6 @@ protocol TabNavigationDataStore { }
 
 class TabNavigationInteractor: TabNavigationBusinessLogic, TabNavigationDataStore {
 	var presenter: TabNavigationPresentationLogic?
-	var worker: TabNavigationWorker?
   
     func initTabs(request: TabNavigation.InitTabs.Request) {
     	let response = TabNavigation.InitTabs.Response()
