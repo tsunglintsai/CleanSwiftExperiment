@@ -15,6 +15,12 @@
 		BA074CD51F6631F00003A064 /* ItemDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */; };
 		BA074CD61F6631F00003A064 /* ItemDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */; };
 		BA074CD71F6631F00003A064 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */; };
+		BA2344BF1F66E97600EF8542 /* TabNavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344B91F66E97600EF8542 /* TabNavigationInteractor.swift */; };
+		BA2344C01F66E97600EF8542 /* TabNavigationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BA1F66E97600EF8542 /* TabNavigationModels.swift */; };
+		BA2344C11F66E97600EF8542 /* TabNavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */; };
+		BA2344C21F66E97600EF8542 /* TabNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BC1F66E97600EF8542 /* TabNavigationRouter.swift */; };
+		BA2344C31F66E97600EF8542 /* TabNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BD1F66E97600EF8542 /* TabNavigationViewController.swift */; };
+		BA2344C41F66E97600EF8542 /* TabNavigationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BE1F66E97600EF8542 /* TabNavigationWorker.swift */; };
 		BA6D32DB1F65B35C00E9DFD0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32D51F65B35C00E9DFD0 /* HomeInteractor.swift */; };
 		BA6D32DC1F65B35C00E9DFD0 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32D61F65B35C00E9DFD0 /* HomeModels.swift */; };
 		BA6D32DD1F65B35C00E9DFD0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32D71F65B35C00E9DFD0 /* HomePresenter.swift */; };
@@ -23,6 +29,11 @@
 		BA6D32E81F65BCB800E9DFD0 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32E71F65BCB800E9DFD0 /* UserData.swift */; };
 		BA6D32EA1F65BD0D00E9DFD0 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32E91F65BD0D00E9DFD0 /* EntityManager.swift */; };
 		BA6D32EC1F65CA5D00E9DFD0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32EB1F65CA5D00E9DFD0 /* API.swift */; };
+		BACFC46D1F67029400CA4517 /* TrackCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFC4671F67029400CA4517 /* TrackCollectionPresenter.swift */; };
+		BACFC46E1F67029400CA4517 /* TrackCollectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFC4681F67029400CA4517 /* TrackCollectionRouter.swift */; };
+		BACFC46F1F67029400CA4517 /* TrackCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFC4691F67029400CA4517 /* TrackCollectionViewController.swift */; };
+		BACFC4721F6702B200CA4517 /* TrackCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACFC4711F6702B200CA4517 /* TrackCollectionViewController.storyboard */; };
+		BACFC4741F67034600CA4517 /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFC4731F67034600CA4517 /* TrackCollectionViewCell.swift */; };
 		BAD3E1031F650A85001CEA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1021F650A85001CEA41 /* AppDelegate.swift */; };
 		BAD3E10A1F650A85001CEA41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD3E1091F650A85001CEA41 /* Assets.xcassets */; };
 		BAD3E10D1F650A85001CEA41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD3E10B1F650A85001CEA41 /* LaunchScreen.storyboard */; };
@@ -57,6 +68,12 @@
 		BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailPresenter.swift; sourceTree = "<group>"; };
 		BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailRouter.swift; sourceTree = "<group>"; };
 		BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		BA2344B91F66E97600EF8542 /* TabNavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationInteractor.swift; sourceTree = "<group>"; };
+		BA2344BA1F66E97600EF8542 /* TabNavigationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationModels.swift; sourceTree = "<group>"; };
+		BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationPresenter.swift; sourceTree = "<group>"; };
+		BA2344BC1F66E97600EF8542 /* TabNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationRouter.swift; sourceTree = "<group>"; };
+		BA2344BD1F66E97600EF8542 /* TabNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationViewController.swift; sourceTree = "<group>"; };
+		BA2344BE1F66E97600EF8542 /* TabNavigationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationWorker.swift; sourceTree = "<group>"; };
 		BA6D32D51F65B35C00E9DFD0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		BA6D32D61F65B35C00E9DFD0 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		BA6D32D71F65B35C00E9DFD0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -65,6 +82,11 @@
 		BA6D32E71F65BCB800E9DFD0 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BA6D32E91F65BD0D00E9DFD0 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		BA6D32EB1F65CA5D00E9DFD0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BACFC4671F67029400CA4517 /* TrackCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionPresenter.swift; sourceTree = "<group>"; };
+		BACFC4681F67029400CA4517 /* TrackCollectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionRouter.swift; sourceTree = "<group>"; };
+		BACFC4691F67029400CA4517 /* TrackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewController.swift; sourceTree = "<group>"; };
+		BACFC4711F6702B200CA4517 /* TrackCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrackCollectionViewController.storyboard; sourceTree = "<group>"; };
+		BACFC4731F67034600CA4517 /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		BAD3E0FF1F650A85001CEA41 /* CleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD3E1021F650A85001CEA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAD3E1091F650A85001CEA41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +138,19 @@
 			path = ItemDetail;
 			sourceTree = "<group>";
 		};
+		BA2344B81F66E92B00EF8542 /* TabMenu */ = {
+			isa = PBXGroup;
+			children = (
+				BA2344B91F66E97600EF8542 /* TabNavigationInteractor.swift */,
+				BA2344BA1F66E97600EF8542 /* TabNavigationModels.swift */,
+				BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */,
+				BA2344BC1F66E97600EF8542 /* TabNavigationRouter.swift */,
+				BA2344BD1F66E97600EF8542 /* TabNavigationViewController.swift */,
+				BA2344BE1F66E97600EF8542 /* TabNavigationWorker.swift */,
+			);
+			path = TabMenu;
+			sourceTree = "<group>";
+		};
 		BA6D32D41F65B33300E9DFD0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +195,18 @@
 				BAD3E14F1F65A8E9001CEA41 /* PerformLoginWorker.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		BACFC4641F67026A00CA4517 /* TrackCollection */ = {
+			isa = PBXGroup;
+			children = (
+				BACFC4671F67029400CA4517 /* TrackCollectionPresenter.swift */,
+				BACFC4681F67029400CA4517 /* TrackCollectionRouter.swift */,
+				BACFC4691F67029400CA4517 /* TrackCollectionViewController.swift */,
+				BACFC4711F6702B200CA4517 /* TrackCollectionViewController.storyboard */,
+				BACFC4731F67034600CA4517 /* TrackCollectionViewCell.swift */,
+			);
+			path = TrackCollection;
 			sourceTree = "<group>";
 		};
 		BAD3E0F61F650A85001CEA41 = {
@@ -245,10 +292,12 @@
 		BAD7FCDC1F65E38C00F31E49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BA074C9A1F6630290003A064 /* ItemDetail */,
 				BAD3E1401F65A475001CEA41 /* Root */,
+				BA2344B81F66E92B00EF8542 /* TabMenu */,
 				BA6D32D41F65B33300E9DFD0 /* Home */,
+				BA074C9A1F6630290003A064 /* ItemDetail */,
 				BAD3E1231F65106E001CEA41 /* List */,
+				BACFC4641F67026A00CA4517 /* TrackCollection */,
 				BAD3E1201F650AC2001CEA41 /* Login */,
 			);
 			path = Modules;
@@ -316,6 +365,7 @@
 				BA074CB41F6630DE0003A064 /* ItemDetailViewController.storyboard in Resources */,
 				BAD3E10D1F650A85001CEA41 /* LaunchScreen.storyboard in Resources */,
 				BA074C971F661FD00003A064 /* ListViewController.storyboard in Resources */,
+				BACFC4721F6702B200CA4517 /* TrackCollectionViewController.storyboard in Resources */,
 				BAD3E10A1F650A85001CEA41 /* Assets.xcassets in Resources */,
 				BAD3E1221F650DE3001CEA41 /* LoginView.xib in Resources */,
 			);
@@ -332,10 +382,15 @@
 				BAD3E12D1F651094001CEA41 /* ListRouter.swift in Sources */,
 				BA6D32DB1F65B35C00E9DFD0 /* HomeInteractor.swift in Sources */,
 				BAD3E14E1F65A827001CEA41 /* PersistenceInitlizeWorker.swift in Sources */,
+				BA2344BF1F66E97600EF8542 /* TabNavigationInteractor.swift in Sources */,
 				BAD3E11E1F650ABC001CEA41 /* LoginViewController.swift in Sources */,
+				BA2344C11F66E97600EF8542 /* TabNavigationPresenter.swift in Sources */,
+				BACFC46F1F67029400CA4517 /* TrackCollectionViewController.swift in Sources */,
 				BAD3E14B1F65A493001CEA41 /* RootViewController.swift in Sources */,
 				BA6D32DC1F65B35C00E9DFD0 /* HomeModels.swift in Sources */,
+				BACFC46D1F67029400CA4517 /* TrackCollectionPresenter.swift in Sources */,
 				BA074CD61F6631F00003A064 /* ItemDetailRouter.swift in Sources */,
+				BA2344C21F66E97600EF8542 /* TabNavigationRouter.swift in Sources */,
 				BAD3E1481F65A493001CEA41 /* RootModels.swift in Sources */,
 				BAD3E14A1F65A493001CEA41 /* RootRouter.swift in Sources */,
 				BAD3E11B1F650ABC001CEA41 /* LoginModels.swift in Sources */,
@@ -346,6 +401,10 @@
 				BA074CD51F6631F00003A064 /* ItemDetailPresenter.swift in Sources */,
 				BA6D32EC1F65CA5D00E9DFD0 /* API.swift in Sources */,
 				BA074CD41F6631F00003A064 /* ItemDetailModels.swift in Sources */,
+				BA2344C41F66E97600EF8542 /* TabNavigationWorker.swift in Sources */,
+				BACFC4741F67034600CA4517 /* TrackCollectionViewCell.swift in Sources */,
+				BA2344C01F66E97600EF8542 /* TabNavigationModels.swift in Sources */,
+				BA2344C31F66E97600EF8542 /* TabNavigationViewController.swift in Sources */,
 				BAD3E12F1F651094001CEA41 /* ListWorker.swift in Sources */,
 				BA6D32DE1F65B35C00E9DFD0 /* HomeRouter.swift in Sources */,
 				BA074CD71F6631F00003A064 /* ItemDetailViewController.swift in Sources */,
@@ -353,6 +412,7 @@
 				BA074C991F6624CC0003A064 /* ListViewCell.swift in Sources */,
 				BAD3E1031F650A85001CEA41 /* AppDelegate.swift in Sources */,
 				BA6D32DD1F65B35C00E9DFD0 /* HomePresenter.swift in Sources */,
+				BACFC46E1F67029400CA4517 /* TrackCollectionRouter.swift in Sources */,
 				BAD3E1501F65A8E9001CEA41 /* PerformLoginWorker.swift in Sources */,
 				BAD3E1471F65A493001CEA41 /* RootInteractor.swift in Sources */,
 				BAD3E1491F65A493001CEA41 /* RootPresenter.swift in Sources */,

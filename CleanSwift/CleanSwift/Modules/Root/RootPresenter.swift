@@ -18,9 +18,6 @@ protocol RootPresentationLogic {
 
 class RootPresenter: RootPresentationLogic {
 	weak var viewController: RootDisplayLogic?
-  
-	// MARK: Do something
-  
     func presentView(response: Root.InitApplication.Response) {
         DispatchQueue.main.async { [weak self] in
             if response.isUsesrLogin {

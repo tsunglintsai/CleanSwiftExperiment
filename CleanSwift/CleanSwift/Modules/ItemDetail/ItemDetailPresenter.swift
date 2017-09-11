@@ -22,8 +22,10 @@ class ItemDetailPresenter  {
 
 extension ItemDetailPresenter: ItemDetailPresentationLogic {
     func presentDetail(response: ItemDetail.DisplayDetail.Response) {
-        let viewModel = ItemDetailViewController.ViewModel(url: response.url)
-        viewController?.showDetail(viewModel: viewModel)
+        DispatchQueue.main.async {
+            let viewModel = ItemDetailViewController.ViewModel(url: response.url)
+            self.viewController?.showDetail(viewModel: viewModel)
+        }
     }
 }
 

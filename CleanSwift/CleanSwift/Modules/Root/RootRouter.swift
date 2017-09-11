@@ -51,8 +51,8 @@ extension RootRouter: RootRoutingLogic {
     
     func routeToMain() {
         removeAllChildViewControllers()
-        let homeViewController = HomeViewController(nibName: nil, bundle: nil)
-        addChildViewController(childViewController: homeViewController)
+        let tabNavigationController = TabNavigationViewController(nibName: nil, bundle: nil)
+        addChildViewController(childViewController: tabNavigationController)
     }
 }
 
