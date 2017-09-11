@@ -29,18 +29,16 @@ class TabNavigationRouter: NSObject {
 // MARK: Navigation
 extension TabNavigationRouter: TabNavigationRoutingLogic {
     func initTabs() {
-        guard let listViewController1 = UIStoryboard(name: "ListViewController", bundle: nil).instantiateInitialViewController() as? ListViewController else { return }
-        guard let listViewController2 = UIStoryboard(name: "TrackCollectionViewController", bundle: nil).instantiateInitialViewController() as? TrackCollectionViewController else { return }
-
-        let tab1 = listViewController1
-        let tab2 = listViewController2
+        guard let listViewController = UIStoryboard(name: "ListViewController", bundle: nil).instantiateInitialViewController() as? ListViewController else { return }
+        guard let collectionViewController = UIStoryboard(name: "TrackCollectionViewController", bundle: nil).instantiateInitialViewController() as? TrackCollectionViewController else { return }
+        let tab1 = listViewController
+        let tab2 = collectionViewController
         let navigaionControllerForTab1 = UINavigationController(rootViewController: tab1)
         let navigaionControllerForTab2 = UINavigationController(rootViewController: tab2)
         viewControllers = [navigaionControllerForTab1, navigaionControllerForTab2]
         viewController?.viewControllers = viewControllers
-        viewController?.tabBar.items?.forEach {
-            $0.title = "Tab"
-        }
+        viewController?.tabBar.items?[0].title = "List"
+        viewController?.tabBar.items?[0].title = "Collection"
     }
 }
 

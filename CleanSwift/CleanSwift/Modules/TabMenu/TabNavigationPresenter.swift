@@ -16,13 +16,13 @@ protocol TabNavigationPresentationLogic {
 	func presentTabs(response: TabNavigation.InitTabs.Response)
 }
 
-class TabNavigationPresenter: TabNavigationPresentationLogic {
+class TabNavigationPresenter {
 	weak var viewController: TabNavigationDisplayLogic?
-  
-	// MARK: Do something
-  
-	func presentTabs(response: TabNavigation.InitTabs.Response) {
-    	let viewModel = TabNavigationViewController.ViewModel()
-    	viewController?.initTabs(viewModel: viewModel)
+}
+
+extension TabNavigationPresenter: TabNavigationPresentationLogic {
+    func presentTabs(response: TabNavigation.InitTabs.Response) {
+        let viewModel = TabNavigationViewController.ViewModel()
+        viewController?.initTabs(viewModel: viewModel)
     }
 }

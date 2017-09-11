@@ -16,16 +16,11 @@ protocol TabNavigationBusinessLogic {
 	func initTabs(request: TabNavigation.InitTabs.Request)
 }
 
-protocol TabNavigationDataStore {
-	//var name: String { get set }
-}
+protocol TabNavigationDataStore { }
 
 class TabNavigationInteractor: TabNavigationBusinessLogic, TabNavigationDataStore {
 	var presenter: TabNavigationPresentationLogic?
 	var worker: TabNavigationWorker?
-	//var name: String = ""
-  
-	// MARK: Do something
   
     func initTabs(request: TabNavigation.InitTabs.Request) {
     	let response = TabNavigation.InitTabs.Response()

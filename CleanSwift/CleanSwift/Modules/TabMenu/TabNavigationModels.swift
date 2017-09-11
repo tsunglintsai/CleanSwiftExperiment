@@ -13,8 +13,7 @@
 import UIKit
 
 enum TabNavigation {
-	// MARK: Use cases
-  
+	// MARK: Use cases  
 	enum InitTabs {
 		struct Request {
     	}
