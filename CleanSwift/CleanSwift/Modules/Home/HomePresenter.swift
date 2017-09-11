@@ -20,7 +20,6 @@ class HomePresenter: HomePresentationLogic {
 	weak var viewController: HomeDisplayLogic?
   
 	// MARK: Do something
-  
     func showView(responder: Home.InitHome.Response) {
         viewController?.showListView()
     }

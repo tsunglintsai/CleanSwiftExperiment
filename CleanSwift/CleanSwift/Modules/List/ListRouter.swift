@@ -12,49 +12,40 @@
 
 import UIKit
 
-@objc protocol ListRoutingLogic
-{
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+@objc protocol ListRoutingLogic {
+    func routeToItemDetail(url: URL)
 }
 
-protocol ListDataPassing
-{
-  var dataStore: ListDataStore? { get }
+protocol ListDataPassing {
+    var dataStore: ListDataStore? { get }
 }
 
-class ListRouter: NSObject, ListRoutingLogic, ListDataPassing
-{
-  weak var viewController: ListViewController?
-  var dataStore: ListDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+class ListRouter: NSObject {
+    weak var viewController: ListViewController?
+    var dataStore: ListDataStore?
+}
+extension ListRouter {
+    func navigateToSomewhere(source: ListViewController, destination: ItemDetailViewController) {
+        source.navigationController?.pushViewController(destination, animated: true)
+    }
+}
 
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: ListViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: ListDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+extension ListRouter: ListDataPassing {
+    func passDataToItemDetail(source: ListDataStore, destination: inout ItemDetailDataStore) {
+        destination.url = source.selectedItemURL
+    }
+}
+
+extension ListRouter: ListRoutingLogic {
+    func routeToItemDetail(url: URL) {
+        guard let viewController = viewController,
+            let itemDetailViewController = UIStoryboard(name: "ItemDetailViewController",
+                                                        bundle: nil).instantiateInitialViewController() as? ItemDetailViewController
+            else { return }
+
+        if let dataStore = dataStore, var destinationDataStore = itemDetailViewController.router?.dataStore {
+            passDataToItemDetail(source: dataStore, destination: &destinationDataStore)
+        }
+        navigateToSomewhere(source: viewController, destination: itemDetailViewController)
+    }
 }

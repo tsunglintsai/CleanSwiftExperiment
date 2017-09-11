@@ -1,5 +1,5 @@
 //
-//  RootViewController.swift
+//  ItemDetailViewController.swift
 //  CleanSwift
 //
 //  Created by Henry on 9/10/17.
@@ -11,16 +11,19 @@
 //
 
 import UIKit
+import WebKit
 
-protocol RootDisplayLogic: class {
-    func displayLogin()
-    func displayMain()
+protocol ItemDetailDisplayLogic: class {
+	func showDetail(viewModel: ItemDetailViewController.ViewModel)
 }
 
-
-class RootViewController: UIViewController {
-	var interactor: RootBusinessLogic?
-	var router: (NSObjectProtocol & RootRoutingLogic & RootDataPassing)?
+class ItemDetailViewController: UIViewController {
+    @IBOutlet weak var webView: WKWebView!
+    struct ViewModel {
+        let url: URL
+    }
+	var interactor: ItemDetailBusinessLogic?
+	var router: (NSObjectProtocol & ItemDetailRoutingLogic & ItemDetailDataPassing)?
 
 	// MARK: Object lifecycle
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -36,9 +39,9 @@ class RootViewController: UIViewController {
   	// MARK: Setup
   	private func setup() {
 	    let viewController = self
-    	let interactor = RootInteractor()
-    	let presenter = RootPresenter()
-    	let router = RootRouter()
+    	let interactor = ItemDetailInteractor()
+    	let presenter = ItemDetailPresenter()
+    	let router = ItemDetailRouter()
     	viewController.interactor = interactor
     	viewController.router = router
     	interactor.presenter = presenter
@@ -46,20 +49,17 @@ class RootViewController: UIViewController {
     	router.viewController = viewController
     	router.dataStore = interactor
     }
-
+    
   	// MARK: View lifecycle
   	override func viewDidLoad() {
    		super.viewDidLoad()
-        let request = Root.InitApplication.Request()
-        interactor?.initApplication(request: request)
-  	}
+        interactor?.displayDetail(request: ItemDetail.DisplayDetail.Request())
+  	}  
 }
 
-extension RootViewController: RootDisplayLogic {
-    func displayLogin() {
-        router?.routeToLogin()
-    }
-    func displayMain() {
-        router?.routeToMain()
+extension ItemDetailViewController: ItemDetailDisplayLogic {
+    func showDetail(viewModel: ItemDetailViewController.ViewModel) {
+        let myRequest = URLRequest(url: viewModel.url)
+        webView.load(myRequest)
     }
 }

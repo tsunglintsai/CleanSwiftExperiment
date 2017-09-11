@@ -12,83 +12,114 @@
 
 import UIKit
 
-protocol ListDisplayLogic: class
-{
-  func displaySomething(viewModel: List.Something.ViewModel)
+protocol ListDisplayLogic: class {
+    func displayList(viewModel: ListViewController.ViewModel)
+    func displayItemDetail(url: URL)
 }
 
-class ListViewController: UITableViewController, ListDisplayLogic
-{
-  var interactor: ListBusinessLogic?
-  var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
-  // MARK: Object lifecycle
-    init() {
-        super.init(nibName: "ListView", bundle: nil)
-        setup()
+extension ListViewController {
+    struct ViewModel {
+        struct Item {
+            var itemId: String
+            var title: String
+            var subtitle: String
+            var imageURL: URL?
+        }
+        private(set) var items: [Item]
+    }
+}
+
+class ListViewController: UITableViewController {
+    var interactor: ListBusinessLogic?
+    var router: (NSObjectProtocol & ListRoutingLogic & ListDataPassing)?
+    var viewModel: ViewModel = ViewModel(items: [ViewModel.Item]()) {
+        didSet {
+            tableView.reloadData()
+        }
     }
 
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = ListInteractor()
-    let presenter = ListPresenter()
-    let router = ListRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
   
-  // MARK: View lifecycle
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
   
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-    view.backgroundColor = UIColor.green
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = List.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: List.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+    // MARK: Setup
+    private func setup() {
+        let viewController = self
+        let interactor = ListInteractor()
+        let presenter = ListPresenter()
+        let router = ListRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+}
+
+extension ListViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.items.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ListViewCell
+            else { return UITableViewCell() }
+        let cellModel = viewModel.items[indexPath.row]
+        cell.updateCell(with: cellModel)
+        return cell
+    }
+}
+
+extension ListViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = viewModel.items[indexPath.row]
+        interactor?.selectItme(itemId: item.itemId)
+    }
+}
+
+extension ListViewCell {
+    func updateCell(with item: ListViewController.ViewModel.Item) {
+        imageURL = item.imageURL
+        mainLabel.text = item.title
+        subTitleLabel.text = item.subtitle
+        guard let imageURL = imageURL else { return }
+        squareImageView.image = nil
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            let image = UIImage(data: imageData)
+            DispatchQueue.main.async {
+                if self.imageURL == imageURL {
+                    self.squareImageView.image = image
+                }
+            }
+        }
+    }
+}
+
+// MARK: View lifecycle
+extension ListViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let request = List.FetchData.Request()
+        interactor?.fetchData(request: request)
+    }
+}
+
+extension ListViewController: ListDisplayLogic {
+    func displayList(viewModel: ListViewController.ViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    func displayItemDetail(url: URL) {
+        router?.routeToItemDetail(url: url)
+    }
 }

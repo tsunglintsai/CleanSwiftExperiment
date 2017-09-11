@@ -12,30 +12,41 @@
 
 import UIKit
 
-protocol ListBusinessLogic
-{
-  func doSomething(request: List.Something.Request)
+protocol ListBusinessLogic {
+    func fetchData(request: List.FetchData.Request)
+    func selectItme(itemId: String)
 }
 
-protocol ListDataStore
-{
-  var name: String { get set }
+protocol ListDataStore {
+    var selectedItemURL: URL? { get set }
 }
 
-class ListInteractor: ListBusinessLogic, ListDataStore
-{
-  var presenter: ListPresentationLogic?
-  var worker: ListWorker?
-  var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: List.Something.Request)
-  {
-    worker = ListWorker()
-    worker?.doSomeWork()
+class ListInteractor: ListDataStore {
+    var presenter: ListPresentationLogic?
+    var worker: ListWorker?
+    var selectedItemURL: URL?
+}
+
+extension ListInteractor: ListBusinessLogic {
+    func fetchData(request: List.FetchData.Request) {
+        worker = ListWorker()
+        worker?.delegate = self
+        worker?.fetchData()
+    }
     
-    let response = List.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    func selectItme(itemId: String) {
+        guard let track = worker?.result.first(where: { (track) -> Bool in
+            track.trackId == itemId
+        }) else { return }
+        selectedItemURL = URL(string: track.detailURL)
+        presenter?.presentTrack(track: track)
+    }
+}
+
+extension ListInteractor: ListWorkerDelegate {
+    func didFetchedData() {
+        guard let tracks = worker?.result else { return }
+        let response = List.FetchData.Response(tracks: tracks)
+        presenter?.presentList(response: response)
+    }
 }

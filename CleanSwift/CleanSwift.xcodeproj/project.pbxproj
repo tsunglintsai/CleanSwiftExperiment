@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA074C971F661FD00003A064 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA074C961F661FD00003A064 /* ListViewController.storyboard */; };
+		BA074C991F6624CC0003A064 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074C981F6624CC0003A064 /* ListViewCell.swift */; };
+		BA074CB41F6630DE0003A064 /* ItemDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA074CB31F6630DE0003A064 /* ItemDetailViewController.storyboard */; };
+		BA074CD31F6631F00003A064 /* ItemDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CCD1F6631F00003A064 /* ItemDetailInteractor.swift */; };
+		BA074CD41F6631F00003A064 /* ItemDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CCE1F6631F00003A064 /* ItemDetailModels.swift */; };
+		BA074CD51F6631F00003A064 /* ItemDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */; };
+		BA074CD61F6631F00003A064 /* ItemDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */; };
+		BA074CD71F6631F00003A064 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */; };
 		BA6D32DB1F65B35C00E9DFD0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32D51F65B35C00E9DFD0 /* HomeInteractor.swift */; };
 		BA6D32DC1F65B35C00E9DFD0 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32D61F65B35C00E9DFD0 /* HomeModels.swift */; };
 		BA6D32DD1F65B35C00E9DFD0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32D71F65B35C00E9DFD0 /* HomePresenter.swift */; };
@@ -30,7 +38,6 @@
 		BAD3E12D1F651094001CEA41 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1271F651094001CEA41 /* ListRouter.swift */; };
 		BAD3E12E1F651094001CEA41 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1281F651094001CEA41 /* ListViewController.swift */; };
 		BAD3E12F1F651094001CEA41 /* ListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1291F651094001CEA41 /* ListWorker.swift */; };
-		BAD3E1311F6511A6001CEA41 /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD3E1301F6511A6001CEA41 /* ListView.xib */; };
 		BAD3E1471F65A493001CEA41 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1411F65A493001CEA41 /* RootInteractor.swift */; };
 		BAD3E1481F65A493001CEA41 /* RootModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1421F65A493001CEA41 /* RootModels.swift */; };
 		BAD3E1491F65A493001CEA41 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1431F65A493001CEA41 /* RootPresenter.swift */; };
@@ -38,9 +45,18 @@
 		BAD3E14B1F65A493001CEA41 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1451F65A493001CEA41 /* RootViewController.swift */; };
 		BAD3E14E1F65A827001CEA41 /* PersistenceInitlizeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E14D1F65A827001CEA41 /* PersistenceInitlizeWorker.swift */; };
 		BAD3E1501F65A8E9001CEA41 /* PerformLoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E14F1F65A8E9001CEA41 /* PerformLoginWorker.swift */; };
+		BAD7FCDF1F65FEA700F31E49 /* MusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7FCDE1F65FEA700F31E49 /* MusicAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA074C961F661FD00003A064 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
+		BA074C981F6624CC0003A064 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		BA074CB31F6630DE0003A064 /* ItemDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ItemDetailViewController.storyboard; sourceTree = "<group>"; };
+		BA074CCD1F6631F00003A064 /* ItemDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailInteractor.swift; sourceTree = "<group>"; };
+		BA074CCE1F6631F00003A064 /* ItemDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailModels.swift; sourceTree = "<group>"; };
+		BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailPresenter.swift; sourceTree = "<group>"; };
+		BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailRouter.swift; sourceTree = "<group>"; };
+		BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BA6D32D51F65B35C00E9DFD0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		BA6D32D61F65B35C00E9DFD0 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		BA6D32D71F65B35C00E9DFD0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -66,7 +82,6 @@
 		BAD3E1271F651094001CEA41 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		BAD3E1281F651094001CEA41 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		BAD3E1291F651094001CEA41 /* ListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWorker.swift; sourceTree = "<group>"; };
-		BAD3E1301F6511A6001CEA41 /* ListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
 		BAD3E1411F65A493001CEA41 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		BAD3E1421F65A493001CEA41 /* RootModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModels.swift; sourceTree = "<group>"; };
 		BAD3E1431F65A493001CEA41 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
@@ -74,6 +89,7 @@
 		BAD3E1451F65A493001CEA41 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BAD3E14D1F65A827001CEA41 /* PersistenceInitlizeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceInitlizeWorker.swift; sourceTree = "<group>"; };
 		BAD3E14F1F65A8E9001CEA41 /* PerformLoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformLoginWorker.swift; sourceTree = "<group>"; };
+		BAD7FCDE1F65FEA700F31E49 /* MusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA074C9A1F6630290003A064 /* ItemDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BA074CB31F6630DE0003A064 /* ItemDetailViewController.storyboard */,
+				BA074CCD1F6631F00003A064 /* ItemDetailInteractor.swift */,
+				BA074CCE1F6631F00003A064 /* ItemDetailModels.swift */,
+				BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */,
+				BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */,
+				BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */,
+			);
+			path = ItemDetail;
+			sourceTree = "<group>";
+		};
 		BA6D32D41F65B33300E9DFD0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				BA6D32EB1F65CA5D00E9DFD0 /* API.swift */,
+				BAD7FCDE1F65FEA700F31E49 /* MusicAPI.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -151,6 +181,7 @@
 		BAD3E1011F650A85001CEA41 /* CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				BAD3E10E1F650A85001CEA41 /* Info.plist */,
 				BAD7FCDC1F65E38C00F31E49 /* Modules */,
 				BA6D32ED1F65D44400E9DFD0 /* Workers */,
 				BA6D32E61F65BCA800E9DFD0 /* Entity */,
@@ -183,7 +214,8 @@
 				BAD3E1271F651094001CEA41 /* ListRouter.swift */,
 				BAD3E1281F651094001CEA41 /* ListViewController.swift */,
 				BAD3E1291F651094001CEA41 /* ListWorker.swift */,
-				BAD3E1301F6511A6001CEA41 /* ListView.xib */,
+				BA074C961F661FD00003A064 /* ListViewController.storyboard */,
+				BA074C981F6624CC0003A064 /* ListViewCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -204,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				BAD3E1021F650A85001CEA41 /* AppDelegate.swift */,
-				BAD3E10E1F650A85001CEA41 /* Info.plist */,
 				BAD3E10B1F650A85001CEA41 /* LaunchScreen.storyboard */,
 				BAD3E1091F650A85001CEA41 /* Assets.xcassets */,
 			);
@@ -214,6 +245,7 @@
 		BAD7FCDC1F65E38C00F31E49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BA074C9A1F6630290003A064 /* ItemDetail */,
 				BAD3E1401F65A475001CEA41 /* Root */,
 				BA6D32D41F65B33300E9DFD0 /* Home */,
 				BAD3E1231F65106E001CEA41 /* List */,
@@ -281,10 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA074CB41F6630DE0003A064 /* ItemDetailViewController.storyboard in Resources */,
 				BAD3E10D1F650A85001CEA41 /* LaunchScreen.storyboard in Resources */,
+				BA074C971F661FD00003A064 /* ListViewController.storyboard in Resources */,
 				BAD3E10A1F650A85001CEA41 /* Assets.xcassets in Resources */,
 				BAD3E1221F650DE3001CEA41 /* LoginView.xib in Resources */,
-				BAD3E1311F6511A6001CEA41 /* ListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,12 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA074CD31F6631F00003A064 /* ItemDetailInteractor.swift in Sources */,
 				BAD3E12D1F651094001CEA41 /* ListRouter.swift in Sources */,
 				BA6D32DB1F65B35C00E9DFD0 /* HomeInteractor.swift in Sources */,
 				BAD3E14E1F65A827001CEA41 /* PersistenceInitlizeWorker.swift in Sources */,
 				BAD3E11E1F650ABC001CEA41 /* LoginViewController.swift in Sources */,
 				BAD3E14B1F65A493001CEA41 /* RootViewController.swift in Sources */,
 				BA6D32DC1F65B35C00E9DFD0 /* HomeModels.swift in Sources */,
+				BA074CD61F6631F00003A064 /* ItemDetailRouter.swift in Sources */,
 				BAD3E1481F65A493001CEA41 /* RootModels.swift in Sources */,
 				BAD3E14A1F65A493001CEA41 /* RootRouter.swift in Sources */,
 				BAD3E11B1F650ABC001CEA41 /* LoginModels.swift in Sources */,
@@ -308,9 +343,14 @@
 				BA6D32DF1F65B35C00E9DFD0 /* HomeViewController.swift in Sources */,
 				BAD3E11D1F650ABC001CEA41 /* LoginRouter.swift in Sources */,
 				BAD3E12B1F651094001CEA41 /* ListModels.swift in Sources */,
+				BA074CD51F6631F00003A064 /* ItemDetailPresenter.swift in Sources */,
 				BA6D32EC1F65CA5D00E9DFD0 /* API.swift in Sources */,
+				BA074CD41F6631F00003A064 /* ItemDetailModels.swift in Sources */,
 				BAD3E12F1F651094001CEA41 /* ListWorker.swift in Sources */,
 				BA6D32DE1F65B35C00E9DFD0 /* HomeRouter.swift in Sources */,
+				BA074CD71F6631F00003A064 /* ItemDetailViewController.swift in Sources */,
+				BAD7FCDF1F65FEA700F31E49 /* MusicAPI.swift in Sources */,
+				BA074C991F6624CC0003A064 /* ListViewCell.swift in Sources */,
 				BAD3E1031F650A85001CEA41 /* AppDelegate.swift in Sources */,
 				BA6D32DD1F65B35C00E9DFD0 /* HomePresenter.swift in Sources */,
 				BAD3E1501F65A8E9001CEA41 /* PerformLoginWorker.swift in Sources */,

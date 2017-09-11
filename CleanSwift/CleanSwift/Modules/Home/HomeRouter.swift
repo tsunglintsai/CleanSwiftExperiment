@@ -23,39 +23,11 @@ protocol HomeDataPassing {
 class HomeRouter: NSObject, HomeDataPassing {
 	weak var viewController: HomeViewController?
 	var dataStore: HomeDataStore?
-  
-	// MARK: Routing
-  
-	//func routeToSomewhere(segue: UIStoryboardSegue?) {
-	//  if let segue = segue {
-	//    let destinationVC = segue.destination as! SomewhereViewController
-	//    var destinationDS = destinationVC.router!.dataStore!
-	//    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-	//  } else {
-	//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-	//    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-	//    var destinationDS = destinationVC.router!.dataStore!
-	//    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-	//    navigateToSomewhere(source: viewController!, destination: destinationVC)
-	//  }
-	//}
-
-	// MARK: Navigation
-  
-	//func navigateToSomewhere(source: HomeViewController, destination: SomewhereViewController) {
-  	//  source.show(destination, sender: nil)
-	//}
-  
- 	 // MARK: Passing data
-  
-  	//func passDataToSomewhere(source: HomeDataStore, destination: inout SomewhereDataStore) {
-	//  destination.name = source.name
-	//}
 }
 
 extension HomeRouter: HomeRoutingLogic {
     func routeToListView() {
-        let listViewController = ListViewController(nibName: nil, bundle: nil)
+        guard let listViewController = UIStoryboard(name: "ListViewController", bundle: nil).instantiateInitialViewController() as? ListViewController else { return }
         viewController?.viewControllers = [listViewController]
     }
 }

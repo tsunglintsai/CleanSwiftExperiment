@@ -12,20 +12,29 @@
 
 import UIKit
 
-protocol ListPresentationLogic
-{
-  func presentSomething(response: List.Something.Response)
+protocol ListPresentationLogic {
+    func presentList(response: List.FetchData.Response)
+    func presentTrack(track: MusicAPIFeed.Track)
 }
 
-class ListPresenter: ListPresentationLogic
-{
-  weak var viewController: ListDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: List.Something.Response)
-  {
-    let viewModel = List.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+class ListPresenter: ListPresentationLogic {
+    weak var viewController: ListDisplayLogic?
+    func presentList(response: List.FetchData.Response) {
+        DispatchQueue.main.async { [weak self] in
+            let viewModel = ListViewController.ViewModel(items: response.tracks.flatMap{$0.toItem()})
+            self?.viewController?.displayList(viewModel: viewModel)
+        }
+    }
+    func presentTrack(track: MusicAPIFeed.Track) {
+        guard let itemDetailURL = URL(string: track.detailURL) else { return }
+        DispatchQueue.main.async { [weak self] in
+            self?.viewController?.displayItemDetail(url: itemDetailURL)
+        }
+    }
+}
+
+extension MusicAPIFeed.Track {
+    func toItem() -> ListViewController.ViewModel.Item? {
+        return ListViewController.ViewModel.Item(itemId: trackId, title: name, subtitle: artistName, imageURL: URL(string: artWorkURL))
+    }
 }
