@@ -22,6 +22,9 @@
 		BA60E4CB1F677C6300E02B8E /* ITunesFeedAPIImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA60E4CA1F677C6300E02B8E /* ITunesFeedAPIImp.swift */; };
 		BA69EFF91F6797A900E6CB84 /* ItemDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CCE1F6631F00003A064 /* ItemDetailModels.swift */; };
 		BA69EFFA1F6797B700E6CB84 /* ItemDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CCD1F6631F00003A064 /* ItemDetailInteractor.swift */; };
+		BA69EFFD1F67A9D700E6CB84 /* RootModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1421F65A493001CEA41 /* RootModels.swift */; };
+		BA69EFFE1F67A9DC00E6CB84 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1411F65A493001CEA41 /* RootInteractor.swift */; };
+		BA69F0041F67B91E00E6CB84 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69F0031F67B8C200E6CB84 /* Promise.swift */; };
 		BA881C871F67952C00F4DACB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC740FE1F6791CC000F50BF /* UserData.swift */; };
 		BA881C8A1F6795B000F4DACB /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADE1A191F67581200477879 /* BusinessLogic.framework */; };
 		BA881C8D1F67961E00F4DACB /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA881C8C1F67961E00F4DACB /* EntityManager.swift */; };
@@ -54,12 +57,9 @@
 		BAD3E12C1F651094001CEA41 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1261F651094001CEA41 /* ListPresenter.swift */; };
 		BAD3E12D1F651094001CEA41 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1271F651094001CEA41 /* ListRouter.swift */; };
 		BAD3E12E1F651094001CEA41 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1281F651094001CEA41 /* ListViewController.swift */; };
-		BAD3E1471F65A493001CEA41 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1411F65A493001CEA41 /* RootInteractor.swift */; };
-		BAD3E1481F65A493001CEA41 /* RootModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1421F65A493001CEA41 /* RootModels.swift */; };
 		BAD3E1491F65A493001CEA41 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1431F65A493001CEA41 /* RootPresenter.swift */; };
 		BAD3E14A1F65A493001CEA41 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1441F65A493001CEA41 /* RootRouter.swift */; };
 		BAD3E14B1F65A493001CEA41 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1451F65A493001CEA41 /* RootViewController.swift */; };
-		BAD3E14E1F65A827001CEA41 /* PersistenceInitlizeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E14D1F65A827001CEA41 /* PersistenceInitlizeWorker.swift */; };
 		BADE1A1D1F67581200477879 /* BusinessLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = BADE1A1B1F67581200477879 /* BusinessLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BADE1A201F67581200477879 /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADE1A191F67581200477879 /* BusinessLogic.framework */; };
 		BADE1A211F67581200477879 /* BusinessLogic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BADE1A191F67581200477879 /* BusinessLogic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -136,6 +136,7 @@
 		BA2344BD1F66E97600EF8542 /* TabNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationViewController.swift; sourceTree = "<group>"; };
 		BA60E4C81F6770E500E02B8E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BA60E4CA1F677C6300E02B8E /* ITunesFeedAPIImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesFeedAPIImp.swift; sourceTree = "<group>"; };
+		BA69F0031F67B8C200E6CB84 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		BA881C8C1F67961E00F4DACB /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		BAC740CF1F678A25000F50BF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BAC740D11F678A3A000F50BF /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
@@ -172,7 +173,6 @@
 		BAD3E1431F65A493001CEA41 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		BAD3E1441F65A493001CEA41 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		BAD3E1451F65A493001CEA41 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		BAD3E14D1F65A827001CEA41 /* PersistenceInitlizeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceInitlizeWorker.swift; sourceTree = "<group>"; };
 		BADE1A191F67581200477879 /* BusinessLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusinessLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADE1A1B1F67581200477879 /* BusinessLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessLogic.h; sourceTree = "<group>"; };
 		BADE1A1C1F67581200477879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -280,6 +280,23 @@
 				BA881C8E1F67976900F4DACB /* ItemDetail */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		BA69EFFC1F67A9C200E6CB84 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				BAD3E1411F65A493001CEA41 /* RootInteractor.swift */,
+				BAD3E1421F65A493001CEA41 /* RootModels.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		BA69F0021F67B8B500E6CB84 /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				BA69F0031F67B8C200E6CB84 /* Promise.swift */,
+			);
+			path = Promise;
 			sourceTree = "<group>";
 		};
 		BA881C8B1F67960C00F4DACB /* PersistenceProtocol */ = {
@@ -441,12 +458,9 @@
 		BAD3E1401F65A475001CEA41 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				BAD3E1411F65A493001CEA41 /* RootInteractor.swift */,
-				BAD3E1421F65A493001CEA41 /* RootModels.swift */,
 				BAD3E1431F65A493001CEA41 /* RootPresenter.swift */,
 				BAD3E1441F65A493001CEA41 /* RootRouter.swift */,
 				BAD3E1451F65A493001CEA41 /* RootViewController.swift */,
-				BAD3E14D1F65A827001CEA41 /* PersistenceInitlizeWorker.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -478,10 +492,12 @@
 			isa = PBXGroup;
 			children = (
 				BADE1A1B1F67581200477879 /* BusinessLogic.h */,
+				BA69EFFC1F67A9C200E6CB84 /* Root */,
 				BA69EFFB1F67993600E6CB84 /* Modules */,
 				BAC740DC1F678EBE000F50BF /* Workers */,
 				BAC740FD1F6791B7000F50BF /* Entity */,
 				BA881C8B1F67960C00F4DACB /* PersistenceProtocol */,
+				BA69F0021F67B8B500E6CB84 /* Promise */,
 				BADE1A1C1F67581200477879 /* Info.plist */,
 			);
 			path = BusinessLogic;
@@ -755,7 +771,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAD3E12D1F651094001CEA41 /* ListRouter.swift in Sources */,
-				BAD3E14E1F65A827001CEA41 /* PersistenceInitlizeWorker.swift in Sources */,
 				BA2344BF1F66E97600EF8542 /* TabNavigationInteractor.swift in Sources */,
 				BAD3E11E1F650ABC001CEA41 /* LoginViewController.swift in Sources */,
 				BA2344C11F66E97600EF8542 /* TabNavigationPresenter.swift in Sources */,
@@ -764,7 +779,6 @@
 				BACFC46D1F67029400CA4517 /* TrackCollectionPresenter.swift in Sources */,
 				BA074CD61F6631F00003A064 /* ItemDetailRouter.swift in Sources */,
 				BA2344C21F66E97600EF8542 /* TabNavigationRouter.swift in Sources */,
-				BAD3E1481F65A493001CEA41 /* RootModels.swift in Sources */,
 				BAD3E14A1F65A493001CEA41 /* RootRouter.swift in Sources */,
 				BAD3E11D1F650ABC001CEA41 /* LoginRouter.swift in Sources */,
 				BA074CD51F6631F00003A064 /* ItemDetailPresenter.swift in Sources */,
@@ -775,7 +789,6 @@
 				BA074C991F6624CC0003A064 /* ListViewCell.swift in Sources */,
 				BAD3E1031F650A85001CEA41 /* AppDelegate.swift in Sources */,
 				BACFC46E1F67029400CA4517 /* TrackCollectionRouter.swift in Sources */,
-				BAD3E1471F65A493001CEA41 /* RootInteractor.swift in Sources */,
 				BAD3E1491F65A493001CEA41 /* RootPresenter.swift in Sources */,
 				BAD3E12C1F651094001CEA41 /* ListPresenter.swift in Sources */,
 				BAD3E11C1F650ABC001CEA41 /* LoginPresenter.swift in Sources */,
@@ -793,8 +806,11 @@
 				BA881C871F67952C00F4DACB /* UserData.swift in Sources */,
 				BAC740D91F678C70000F50BF /* ListInteractor.swift in Sources */,
 				BAC740E31F678FF0000F50BF /* LoginModels.swift in Sources */,
+				BA69EFFE1F67A9DC00E6CB84 /* RootInteractor.swift in Sources */,
+				BA69F0041F67B91E00E6CB84 /* Promise.swift in Sources */,
 				BAC740E11F678FAA000F50BF /* LoginInteractor.swift in Sources */,
 				BA881C8D1F67961E00F4DACB /* EntityManager.swift in Sources */,
+				BA69EFFD1F67A9D700E6CB84 /* RootModels.swift in Sources */,
 				BAC740D51F678BD1000F50BF /* ListWorker.swift in Sources */,
 				BA69EFF91F6797A900E6CB84 /* ItemDetailModels.swift in Sources */,
 			);

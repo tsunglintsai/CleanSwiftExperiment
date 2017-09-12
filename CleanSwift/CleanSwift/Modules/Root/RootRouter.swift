@@ -17,13 +17,8 @@ import UIKit
     func routeToMain()
 }
 
-protocol RootDataPassing {
-	var dataStore: RootDataStore? { get }
-}
-
-class RootRouter: NSObject, RootDataPassing {
+class RootRouter: NSObject {
 	weak var viewController: RootViewController?
-	var dataStore: RootDataStore?
     
     func removeAllChildViewControllers() {
         viewController?.childViewControllers.forEach({ (viewController) in

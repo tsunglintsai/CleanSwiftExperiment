@@ -10,16 +10,16 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Foundation
 
-enum Root {
+public enum Root {
 	// MARK: Use cases
-    enum InitApplication {
-        struct Request {
-        
+    public enum InitApplication {
+        public struct Request {
+            public init() { }
         }
-        struct Response {
-            var isUsesrLogin: Bool = false
+        public struct Response {
+            public var isUsesrLogin: Bool = false
         }
     }
 }

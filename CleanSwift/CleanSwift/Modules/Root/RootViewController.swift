@@ -11,16 +11,17 @@
 //
 
 import UIKit
+import BusinessLogic
+import Persistence
 
 protocol RootDisplayLogic: class {
     func displayLogin()
     func displayMain()
 }
 
-
 class RootViewController: UIViewController {
 	var interactor: RootBusinessLogic?
-	var router: (NSObjectProtocol & RootRoutingLogic & RootDataPassing)?
+	var router: (NSObjectProtocol & RootRoutingLogic)?
 
 	// MARK: Object lifecycle
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -44,7 +45,9 @@ class RootViewController: UIViewController {
     	interactor.presenter = presenter
     	presenter.viewController = viewController
     	router.viewController = viewController
-    	router.dataStore = interactor
+        interactor.entityManagerCreationClosure = {
+            return EntityManagerWithUserDefault()
+        }
     }
 
   	// MARK: View lifecycle

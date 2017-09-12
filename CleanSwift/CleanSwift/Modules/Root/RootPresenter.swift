@@ -11,10 +11,7 @@
 //
 
 import UIKit
-
-protocol RootPresentationLogic {
-    func presentView(response: Root.InitApplication.Response)
-}
+import BusinessLogic
 
 class RootPresenter: RootPresentationLogic {
 	weak var viewController: RootDisplayLogic?
