@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import BusinessLogic
 
 @objc protocol TrackCollectionRoutingLogic {
     func routeToItemDetail(url: URL)

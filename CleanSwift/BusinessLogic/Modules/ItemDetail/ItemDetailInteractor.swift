@@ -10,23 +10,28 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Foundation
 
-protocol ItemDetailBusinessLogic {
+public protocol ItemDetailPresentationLogic {
+    func presentDetail(response: ItemDetail.DisplayDetail.Response)
+}
+
+public protocol ItemDetailBusinessLogic {
     func displayDetail(request: ItemDetail.DisplayDetail.Request)
 }
 
-protocol ItemDetailDataStore {
+public protocol ItemDetailDataStore {
     var url: URL? { get set }
 }
 
-class ItemDetailInteractor  {
-	var presenter: ItemDetailPresentationLogic?
-    var url: URL?
+public class ItemDetailInteractor  {
+	public var presenter: ItemDetailPresentationLogic?
+    public var url: URL?
+    public init() { }
 }
 
 extension ItemDetailInteractor: ItemDetailBusinessLogic {
-    func displayDetail(request: ItemDetail.DisplayDetail.Request) {
+    public func displayDetail(request: ItemDetail.DisplayDetail.Request) {
         guard let url = url else {
             return
         }

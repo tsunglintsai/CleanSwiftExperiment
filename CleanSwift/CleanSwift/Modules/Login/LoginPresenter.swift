@@ -11,10 +11,7 @@
 //
 
 import UIKit
-
-protocol LoginPresentationLogic {
-    func loginSuccess()
-}
+import BusinessLogic
 
 class LoginPresenter {
   weak var viewController: LoginDisplayLogic?

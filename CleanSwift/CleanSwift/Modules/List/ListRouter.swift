@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import BusinessLogic
 
 @objc protocol ListRoutingLogic {
     func routeToItemDetail(url: URL)

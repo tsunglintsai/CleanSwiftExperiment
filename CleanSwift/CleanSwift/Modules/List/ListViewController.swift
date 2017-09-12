@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import BusinessLogic
 
 protocol ListDisplayLogic: class {
     func displayList(viewModel: ListViewController.ViewModel)

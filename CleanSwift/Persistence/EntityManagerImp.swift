@@ -1,19 +1,16 @@
 //
 //  EntityManager.swift
-//  CleanSwift
+//  Persistence
 //
-//  Created by Henry on 9/10/17.
+//  Created by Henry on 9/11/17.
 //  Copyright © 2017 Henry Tsai. All rights reserved.
 //
 
 import Foundation
+import BusinessLogic
 
-protocol EntityManager {
-    func fetchUserData() -> UserData?
-    func saveUserData(userData: UserData)
-}
-
-struct EntityManagerWithUserDefault {
+public struct EntityManagerWithUserDefault {
+    public init() { }
     struct PersistenceKey {
         private(set) var keyName: String
         init(keyName: String) {
@@ -27,7 +24,7 @@ struct EntityManagerWithUserDefault {
 }
 
 extension EntityManagerWithUserDefault: EntityManager {
-    func fetchUserData() -> UserData? {
+    public func fetchUserData() -> UserData? {
         guard let userId = userDefault.string(forKey: EntityManagerWithUserDefault.userIdKey.keyName) else { return nil }
         let accessToken = userDefault.string(forKey: EntityManagerWithUserDefault.accessTokenKey.keyName)
         let refreshToken = userDefault.string(forKey: EntityManagerWithUserDefault.refreshTokenKey.keyName)
@@ -35,7 +32,7 @@ extension EntityManagerWithUserDefault: EntityManager {
         return result
     }
     
-    func saveUserData(userData: UserData) {
+    public func saveUserData(userData: UserData) {
         let userId = userData.userId
         let accessToken = userData.accessToken
         let refreshToken = userData.refreshToken

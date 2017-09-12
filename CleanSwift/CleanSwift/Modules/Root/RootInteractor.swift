@@ -11,6 +11,8 @@
 //
 
 import UIKit
+import BusinessLogic
+import Persistence
 
 protocol RootBusinessLogic {
     func initApplication(request: Root.InitApplication.Request)

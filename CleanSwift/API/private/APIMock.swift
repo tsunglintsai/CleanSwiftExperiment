@@ -1,33 +1,12 @@
 //
-//  API.swift
-//  CleanSwift
+//  APIMock.swift
+//  API
 //
-//  Created by Henry on 9/10/17.
+//  Created by Henry on 9/11/17.
 //  Copyright © 2017 Henry Tsai. All rights reserved.
 //
 
 import Foundation
-
-struct APIAuth {
-    enum Request {
-        case new(userId: String, password: String)
-        case refresh(userId: String, refreshToken: String)
-    }
-    enum Response<T> {
-        case success(request: APIAuth.Request, result: T)
-        case error(request: APIAuth.Request, code: Int)
-    }
-    
-    struct Result {
-        var refreshToken: String
-        var accessToken: String
-    }
-}
-
-protocol API {
-    typealias AuthCompletion = (APIAuth.Response<APIAuth.Result>) -> Void
-    func auth(request: APIAuth.Request, completion: @escaping AuthCompletion)
-}
 
 struct APIWithMock: API {
     func auth(request: APIAuth.Request, completion: @escaping AuthCompletion) {

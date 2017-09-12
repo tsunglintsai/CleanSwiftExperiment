@@ -11,6 +11,8 @@
 //
 
 import UIKit
+import BusinessLogic
+import Persistence
 
 protocol LoginDisplayLogic: class {
     func loginSuccess()
@@ -41,7 +43,7 @@ class LoginViewController: UIViewController {
     // MARK: Setup
     private func setup(routerDelegate: LoginRouterDelegate? = nil) {
         let viewController = self
-        let interactor = LoginInteractor()
+        let interactor = LoginInteractor(entityManager: EntityManagerWithUserDefault())
         let presenter = LoginPresenter()
         let router = LoginRouter()
         router.delegate = routerDelegate

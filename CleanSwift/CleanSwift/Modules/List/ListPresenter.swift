@@ -11,21 +11,19 @@
 //
 
 import UIKit
-
-protocol ListPresentationLogic {
-    func presentList(response: List.FetchData.Response)
-    func presentTrack(track: MusicAPIFeed.Track)
-}
+import ITunesFeed
+import BusinessLogic
 
 class ListPresenter: ListPresentationLogic {
     weak var viewController: ListDisplayLogic?
-    func presentList(response: List.FetchData.Response) {
+    func presentList(list: [ITunesFeed.Track]) {
         DispatchQueue.main.async { [weak self] in
-            let viewModel = ListViewController.ViewModel(items: response.tracks.flatMap{$0.toItem()})
+            let items = list.flatMap{$0.toListViewControllerItem()}
+            let viewModel = ListViewController.ViewModel(items: items)
             self?.viewController?.displayList(viewModel: viewModel)
         }
     }
-    func presentTrack(track: MusicAPIFeed.Track) {
+    func presentTrack(track: ITunesFeed.Track) {
         guard let itemDetailURL = URL(string: track.detailURL) else { return }
         DispatchQueue.main.async { [weak self] in
             self?.viewController?.displayItemDetail(url: itemDetailURL)
@@ -33,8 +31,8 @@ class ListPresenter: ListPresentationLogic {
     }
 }
 
-extension MusicAPIFeed.Track {
-    func toItem() -> ListViewController.ViewModel.Item? {
+extension ITunesFeed.Track {
+    func toListViewControllerItem() -> ListViewController.ViewModel.Item? {
         return ListViewController.ViewModel.Item(itemId: trackId, title: name, subtitle: artistName, imageURL: URL(string: artWorkURL))
     }
 }

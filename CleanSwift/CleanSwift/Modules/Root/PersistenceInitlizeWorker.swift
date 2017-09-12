@@ -11,6 +11,8 @@
 //
 
 import UIKit
+import BusinessLogic
+import Persistence
 
 class PersistenceInitlizeWorker {
 	func initlizePersistence() -> EntityManager {

@@ -11,10 +11,7 @@
 //
 
 import UIKit
-
-protocol ItemDetailPresentationLogic {
-    func presentDetail(response: ItemDetail.DisplayDetail.Response)
-}
+import BusinessLogic
 
 class ItemDetailPresenter  {
 	weak var viewController: ItemDetailDisplayLogic?  

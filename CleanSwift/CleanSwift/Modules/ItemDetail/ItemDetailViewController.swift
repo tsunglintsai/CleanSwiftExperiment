@@ -12,6 +12,7 @@
 
 import UIKit
 import WebKit
+import BusinessLogic
 
 protocol ItemDetailDisplayLogic: class {
 	func showDetail(viewModel: ItemDetailViewController.ViewModel)

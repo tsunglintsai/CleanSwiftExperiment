@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import BusinessLogic
 
 protocol TrackCollectionDisplayLogic: class {
     func displayList(viewModel: TrackCollectionViewController.ViewModel)
