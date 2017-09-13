@@ -14,7 +14,7 @@ protocol URLContertable {
 
 extension ITunesFeed.AppleMusic.Request {
     var url: URL? {
-        return URL(string:"https://rss.itunes.apple.com/api/v1/us/apple-music/\(feedType.code)/\(limit)/explicit.json")
+        return URL(string:"https://rss.itunes.apple.com/api/v1/us/apple-music/\(feedType.code)/all/\(limit)/explicit.json")
     }
 }
 
