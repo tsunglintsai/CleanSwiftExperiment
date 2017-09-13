@@ -49,7 +49,9 @@ extension RootInteractor {
                 completion(false)
                 return
         }
-        performLogin.performReauth(userId: userData.userId, refreshToken: refreshToken) { [weak self]  (success, accessToken, refreshToken) -> (Void) in
+        performLogin.performReauth(userId: userData.userId,
+                                   refreshToken: refreshToken)
+        { [weak self]  (success, accessToken, refreshToken) -> (Void) in
             if success {
                 let newUserData = UserData(userId: userData.userId, accessToken: accessToken, refreshToken: refreshToken)
                 self?.entityManager?.saveUserData(userData: newUserData)
