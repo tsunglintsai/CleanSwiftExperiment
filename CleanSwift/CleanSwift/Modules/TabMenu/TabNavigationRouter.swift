@@ -12,20 +12,30 @@
 
 import UIKit
 
-@objc protocol TabNavigationRoutingLogic {
+@objc protocol TabNavigationRoutingLogic: NSObjectProtocol {
     func initTabs()
 }
 
 class TabNavigationRouter: NSObject {
 	weak var viewController: TabNavigationViewController?
-    var viewControllers = [UIViewController]()
+    private var viewControllers = [UIViewController]()
+    private var listViewControllerFactory: ListViewControllerFactory
+    private var trackCollectionViewControllerFactory: TrackCollectionViewControllerFactory
+    init(listViewControllerFactory: ListViewControllerFactory,
+         trackCollectionViewControllerFactory: TrackCollectionViewControllerFactory) {
+        self.listViewControllerFactory = listViewControllerFactory
+        self.trackCollectionViewControllerFactory = trackCollectionViewControllerFactory
+    }
 }
 
 // MARK: Navigation
 extension TabNavigationRouter: TabNavigationRoutingLogic {
     func initTabs() {
-        guard let listViewController = UIStoryboard(name: "ListViewController", bundle: nil).instantiateInitialViewController() as? ListViewController else { return }
-        guard let collectionViewController = UIStoryboard(name: "TrackCollectionViewController", bundle: nil).instantiateInitialViewController() as? TrackCollectionViewController else { return }
+        guard let listViewController = listViewControllerFactory.build(),
+            let collectionViewController = trackCollectionViewControllerFactory.build()
+            else {
+                return
+        }
         let tab1 = listViewController
         let tab2 = collectionViewController
         let navigaionControllerForTab1 = UINavigationController(rootViewController: tab1)

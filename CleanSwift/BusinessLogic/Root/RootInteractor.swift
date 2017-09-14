@@ -23,12 +23,13 @@ public protocol RootBusinessLogic {
 public protocol RootDataStore { }
 
 public class RootInteractor: RootDataStore {
-    public var entityManagerCreationClosure: (() -> EntityManager)?
 	public var presenter: RootPresentationLogic?
     fileprivate var entityManager: EntityManager?
     fileprivate var currenUser: UserData?
     fileprivate let performLogin = PerformLoginWorker()
-    public init() { }
+    public init(entityManager: EntityManager) {
+        self.entityManager = entityManager
+    }
 }
 
 extension RootInteractor {
@@ -66,10 +67,6 @@ extension RootInteractor {
 extension RootInteractor: RootBusinessLogic {
     public func initApplication(request: Root.InitApplication.Request) {
         Promise.firstOnMainQueue { [weak self] completion in
-            // init persistence
-            self?.entityManager = self?.entityManagerCreationClosure?()
-            completion(Promise.Resolution.fulfilled)
-        }.thenOnMainQueue { [weak self] completion in
             // get user data
             self?.currenUser = self?.entityManager?.fetchUserData()
             completion(Promise.Resolution.fulfilled)

@@ -25,6 +25,9 @@
 		BA69EFFD1F67A9D700E6CB84 /* RootModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1421F65A493001CEA41 /* RootModels.swift */; };
 		BA69EFFE1F67A9DC00E6CB84 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD3E1411F65A493001CEA41 /* RootInteractor.swift */; };
 		BA69F0041F67B91E00E6CB84 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69F0031F67B8C200E6CB84 /* Promise.swift */; };
+		BA83813B1F6A0DA60048F51D /* RootViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83813A1F6A0DA60048F51D /* RootViewControllerFactory.swift */; };
+		BA83813D1F6A14C70048F51D /* ListViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83813C1F6A14C70048F51D /* ListViewControllerFactory.swift */; };
+		BA83813F1F6A17A30048F51D /* TabNavigationViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83813E1F6A17A30048F51D /* TabNavigationViewControllerFactory.swift */; };
 		BA881C871F67952C00F4DACB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC740FE1F6791CC000F50BF /* UserData.swift */; };
 		BA881C8A1F6795B000F4DACB /* BusinessLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADE1A191F67581200477879 /* BusinessLogic.framework */; };
 		BA881C8D1F67961E00F4DACB /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA881C8C1F67961E00F4DACB /* EntityManager.swift */; };
@@ -42,6 +45,10 @@
 		BAC740F21F679072000F50BF /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BAC740EA1F679072000F50BF /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BAC740F71F679081000F50BF /* EntityManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC740F61F679081000F50BF /* EntityManagerImp.swift */; };
 		BAC741021F67927E000F50BF /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADE1A2E1F67588D00477879 /* API.framework */; };
+		BACE115F1F6A27830056C54D /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE115E1F6A27830056C54D /* Injector.swift */; };
+		BACE11611F6A28BA0056C54D /* LoginViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE11601F6A28BA0056C54D /* LoginViewControllerFactory.swift */; };
+		BACE11631F6A2EF40056C54D /* TrackCollectionViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE11621F6A2EF40056C54D /* TrackCollectionViewControllerFactory.swift */; };
+		BACE11651F6A31A40056C54D /* ItemDetailViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACE11641F6A31A40056C54D /* ItemDetailViewControllerFactory.swift */; };
 		BACFC46D1F67029400CA4517 /* TrackCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFC4671F67029400CA4517 /* TrackCollectionPresenter.swift */; };
 		BACFC46E1F67029400CA4517 /* TrackCollectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFC4681F67029400CA4517 /* TrackCollectionRouter.swift */; };
 		BACFC46F1F67029400CA4517 /* TrackCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACFC4691F67029400CA4517 /* TrackCollectionViewController.swift */; };
@@ -137,6 +144,9 @@
 		BA60E4C81F6770E500E02B8E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		BA60E4CA1F677C6300E02B8E /* ITunesFeedAPIImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesFeedAPIImp.swift; sourceTree = "<group>"; };
 		BA69F0031F67B8C200E6CB84 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		BA83813A1F6A0DA60048F51D /* RootViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerFactory.swift; sourceTree = "<group>"; };
+		BA83813C1F6A14C70048F51D /* ListViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerFactory.swift; sourceTree = "<group>"; };
+		BA83813E1F6A17A30048F51D /* TabNavigationViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationViewControllerFactory.swift; sourceTree = "<group>"; };
 		BA881C8C1F67961E00F4DACB /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		BAC740CF1F678A25000F50BF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BAC740D11F678A3A000F50BF /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
@@ -151,6 +161,10 @@
 		BAC740ED1F679072000F50BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAC740F61F679081000F50BF /* EntityManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManagerImp.swift; sourceTree = "<group>"; };
 		BAC740FE1F6791CC000F50BF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		BACE115E1F6A27830056C54D /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Injector.swift; path = CleanSwift/Modules/Root/Injector.swift; sourceTree = SOURCE_ROOT; };
+		BACE11601F6A28BA0056C54D /* LoginViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerFactory.swift; sourceTree = "<group>"; };
+		BACE11621F6A2EF40056C54D /* TrackCollectionViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewControllerFactory.swift; sourceTree = "<group>"; };
+		BACE11641F6A31A40056C54D /* ItemDetailViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewControllerFactory.swift; sourceTree = "<group>"; };
 		BACFC4671F67029400CA4517 /* TrackCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionPresenter.swift; sourceTree = "<group>"; };
 		BACFC4681F67029400CA4517 /* TrackCollectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionRouter.swift; sourceTree = "<group>"; };
 		BACFC4691F67029400CA4517 /* TrackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +248,7 @@
 		BA074C9A1F6630290003A064 /* ItemDetail */ = {
 			isa = PBXGroup;
 			children = (
+				BACE11641F6A31A40056C54D /* ItemDetailViewControllerFactory.swift */,
 				BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */,
 				BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */,
 				BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */,
@@ -245,6 +260,7 @@
 		BA2344B81F66E92B00EF8542 /* TabMenu */ = {
 			isa = PBXGroup;
 			children = (
+				BA83813E1F6A17A30048F51D /* TabNavigationViewControllerFactory.swift */,
 				BA2344B91F66E97600EF8542 /* TabNavigationInteractor.swift */,
 				BA2344BA1F66E97600EF8542 /* TabNavigationModels.swift */,
 				BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */,
@@ -385,9 +401,18 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		BACE115B1F6A256D0056C54D /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				BACE115E1F6A27830056C54D /* Injector.swift */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
 		BACFC4641F67026A00CA4517 /* TrackCollection */ = {
 			isa = PBXGroup;
 			children = (
+				BACE11621F6A2EF40056C54D /* TrackCollectionViewControllerFactory.swift */,
 				BACFC4671F67029400CA4517 /* TrackCollectionPresenter.swift */,
 				BACFC4681F67029400CA4517 /* TrackCollectionRouter.swift */,
 				BACFC4691F67029400CA4517 /* TrackCollectionViewController.swift */,
@@ -427,6 +452,7 @@
 			children = (
 				BAD3E10E1F650A85001CEA41 /* Info.plist */,
 				BAD7FCDC1F65E38C00F31E49 /* Modules */,
+				BACE115B1F6A256D0056C54D /* Dependency Injection */,
 				BAD7FCDB1F65E36700F31E49 /* Other */,
 			);
 			path = CleanSwift;
@@ -435,6 +461,7 @@
 		BAD3E1201F650AC2001CEA41 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				BACE11601F6A28BA0056C54D /* LoginViewControllerFactory.swift */,
 				BAD3E1161F650ABC001CEA41 /* LoginPresenter.swift */,
 				BAD3E1171F650ABC001CEA41 /* LoginRouter.swift */,
 				BAD3E1181F650ABC001CEA41 /* LoginViewController.swift */,
@@ -446,6 +473,7 @@
 		BAD3E1231F65106E001CEA41 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				BA83813C1F6A14C70048F51D /* ListViewControllerFactory.swift */,
 				BAD3E1261F651094001CEA41 /* ListPresenter.swift */,
 				BAD3E1271F651094001CEA41 /* ListRouter.swift */,
 				BAD3E1281F651094001CEA41 /* ListViewController.swift */,
@@ -458,6 +486,7 @@
 		BAD3E1401F65A475001CEA41 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				BA83813A1F6A0DA60048F51D /* RootViewControllerFactory.swift */,
 				BAD3E1431F65A493001CEA41 /* RootPresenter.swift */,
 				BAD3E1441F65A493001CEA41 /* RootRouter.swift */,
 				BAD3E1451F65A493001CEA41 /* RootViewController.swift */,
@@ -480,9 +509,9 @@
 			children = (
 				BAD3E1401F65A475001CEA41 /* Root */,
 				BA2344B81F66E92B00EF8542 /* TabMenu */,
-				BA074C9A1F6630290003A064 /* ItemDetail */,
 				BAD3E1231F65106E001CEA41 /* List */,
 				BACFC4641F67026A00CA4517 /* TrackCollection */,
+				BA074C9A1F6630290003A064 /* ItemDetail */,
 				BAD3E1201F650AC2001CEA41 /* Login */,
 			);
 			path = Modules;
@@ -788,9 +817,16 @@
 				BA074CD71F6631F00003A064 /* ItemDetailViewController.swift in Sources */,
 				BA074C991F6624CC0003A064 /* ListViewCell.swift in Sources */,
 				BAD3E1031F650A85001CEA41 /* AppDelegate.swift in Sources */,
+				BACE11611F6A28BA0056C54D /* LoginViewControllerFactory.swift in Sources */,
+				BACE11651F6A31A40056C54D /* ItemDetailViewControllerFactory.swift in Sources */,
 				BACFC46E1F67029400CA4517 /* TrackCollectionRouter.swift in Sources */,
+				BACE115F1F6A27830056C54D /* Injector.swift in Sources */,
+				BACE11631F6A2EF40056C54D /* TrackCollectionViewControllerFactory.swift in Sources */,
 				BAD3E1491F65A493001CEA41 /* RootPresenter.swift in Sources */,
 				BAD3E12C1F651094001CEA41 /* ListPresenter.swift in Sources */,
+				BA83813B1F6A0DA60048F51D /* RootViewControllerFactory.swift in Sources */,
+				BA83813F1F6A17A30048F51D /* TabNavigationViewControllerFactory.swift in Sources */,
+				BA83813D1F6A14C70048F51D /* ListViewControllerFactory.swift in Sources */,
 				BAD3E11C1F650ABC001CEA41 /* LoginPresenter.swift in Sources */,
 				BAD3E12E1F651094001CEA41 /* ListViewController.swift in Sources */,
 			);

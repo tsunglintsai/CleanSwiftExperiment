@@ -25,20 +25,21 @@ public protocol ListPresentationLogic {
 
 public class ListInteractor: ListDataStore {
     public var presenter: ListPresentationLogic?
-    public var worker: ListWorker?
+    public var worker: ListWorker
     public var selectedItemURL: URL?
-    public init() { }
+    public init(worker: ListWorker) {
+        self.worker = worker
+    }
 }
 
 extension ListInteractor: ListBusinessLogic {
     public func fetchData(request: List.FetchData.Request) {
-        worker = ListWorker()
-        worker?.delegate = self
-        worker?.fetchData()
+        worker.delegate = self
+        worker.fetchData()
     }
     
     public func selectItme(itemId: String) {
-        guard let track = worker?.result.first(where: { (track) -> Bool in
+        guard let track = worker.result.first(where: { (track) -> Bool in
             track.trackId == itemId
         }) else { return }
         selectedItemURL = URL(string: track.detailURL)
@@ -48,7 +49,6 @@ extension ListInteractor: ListBusinessLogic {
 
 extension ListInteractor: ListWorkerDelegate {
     public func didFetchedData() {
-        guard let tracks = worker?.result else { return }
-        presenter?.presentList(list: tracks)
+        presenter?.presentList(list: worker.result)
     }
 }

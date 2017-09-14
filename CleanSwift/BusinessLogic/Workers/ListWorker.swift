@@ -14,10 +14,12 @@ public protocol ListWorkerDelegate: class {
 }
 
 public class ListWorker {
-    public var api: ITunesFeedAPIProtocol = ITunesFeed.createAPI()
+    public var api: ITunesFeedAPIProtocol
     public var result = [ITunesFeed.Track]()
     public weak var delegate: ListWorkerDelegate?
-    public init() { }
+    public init(api: ITunesFeedAPIProtocol) {
+        self.api = api
+    }
     public func fetchData() {
         let request = ITunesFeed.AppleMusic.Request(feedType: ITunesFeed.AppleMusic.FeedType.hotTracks)
         api.featchAppleMusicFeed(request: request) { [weak self] (result) in

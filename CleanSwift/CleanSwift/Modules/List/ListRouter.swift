@@ -24,6 +24,11 @@ protocol ListDataPassing {
 class ListRouter: NSObject {
     weak var viewController: ListViewController?
     var dataStore: ListDataStore?
+    var itemDetailViewControllerFactory: ItemDetailViewControllerFactory
+    init(itemDetailViewControllerFactory: ItemDetailViewControllerFactory) {
+        self.itemDetailViewControllerFactory = itemDetailViewControllerFactory
+        super.init()
+    }
 }
 extension ListRouter {
     func navigateToSomewhere(source: ListViewController, destination: ItemDetailViewController) {
@@ -39,11 +44,9 @@ extension ListRouter: ListDataPassing {
 
 extension ListRouter: ListRoutingLogic {
     func routeToItemDetail(url: URL) {
-        guard let viewController = viewController,
-            let itemDetailViewController = UIStoryboard(name: "ItemDetailViewController",
-                                                        bundle: nil).instantiateInitialViewController() as? ItemDetailViewController
+        guard let itemDetailViewController = itemDetailViewControllerFactory.build(),
+            let viewController = viewController
             else { return }
-
         if let dataStore = dataStore, var destinationDataStore = itemDetailViewController.router?.dataStore {
             passDataToItemDetail(source: dataStore, destination: &destinationDataStore)
         }

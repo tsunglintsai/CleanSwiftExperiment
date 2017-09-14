@@ -24,6 +24,11 @@ protocol TrackCollectionDataPassing {
 class TrackCollectionRouter: NSObject {
 	weak var viewController: TrackCollectionViewController?
 	var dataStore: ListDataStore?
+    var itemDetailViewControllerFactory: ItemDetailViewControllerFactory
+    init(itemDetailViewControllerFactory: ItemDetailViewControllerFactory) {
+        self.itemDetailViewControllerFactory = itemDetailViewControllerFactory
+        super.init()
+    }
 }
 
 // MARK: Navigation
@@ -42,11 +47,9 @@ extension TrackCollectionRouter : TrackCollectionDataPassing {
 
 extension TrackCollectionRouter: TrackCollectionRoutingLogic {
     func routeToItemDetail(url: URL) {
-        guard let viewController = viewController,
-            let itemDetailViewController = UIStoryboard(name: "ItemDetailViewController",
-                                                        bundle: nil).instantiateInitialViewController() as? ItemDetailViewController
+        guard let itemDetailViewController = itemDetailViewControllerFactory.build(),
+            let viewController = viewController
             else { return }
-        
         if let dataStore = dataStore, var destinationDataStore = itemDetailViewController.router?.dataStore {
             passDataToItemDetail(source: dataStore, destination: &destinationDataStore)
         }

@@ -12,13 +12,22 @@
 
 import UIKit
 
-@objc protocol RootRoutingLogic {
+protocol RootRoutingLogic: NSObjectProtocol {
     func routeToLogin()
     func routeToMain()
 }
 
 class RootRouter: NSObject {
 	weak var viewController: RootViewController?
+    var tableBarControllerFactory: TabNavigationViewControllerFactory
+    var loginViewControllerFactory: LoginViewControllerFactory
+
+    init(tableBarControllerFactory: TabNavigationViewControllerFactory,
+         loginViewControllerFactory: LoginViewControllerFactory) {
+        self.tableBarControllerFactory = tableBarControllerFactory
+        self.loginViewControllerFactory = loginViewControllerFactory
+        super.init()
+    }
     
     func removeAllChildViewControllers() {
         viewController?.childViewControllers.forEach({ (viewController) in
@@ -39,14 +48,14 @@ class RootRouter: NSObject {
 
 extension RootRouter: RootRoutingLogic {
     func routeToLogin() {
+        guard let loginViewController = loginViewControllerFactory.build(routerDelegate: self) else { return }
         removeAllChildViewControllers()
-        let loginViewController = LoginViewController(routerDelegate: self)
         addChildViewController(childViewController: loginViewController)
     }
     
     func routeToMain() {
+        guard let tabNavigationController = tableBarControllerFactory.build() else { return }
         removeAllChildViewControllers()
-        let tabNavigationController = TabNavigationViewController(nibName: nil, bundle: nil)
         addChildViewController(childViewController: tabNavigationController)
     }
 }
