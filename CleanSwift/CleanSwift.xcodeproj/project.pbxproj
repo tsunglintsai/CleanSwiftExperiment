@@ -13,6 +13,7 @@
 		BA074CD51F6631F00003A064 /* ItemDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */; };
 		BA074CD61F6631F00003A064 /* ItemDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */; };
 		BA074CD71F6631F00003A064 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */; };
+		BA081A241F72C5B000B2B218 /* Deeplinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA081A231F72C5B000B2B218 /* Deeplinking.swift */; };
 		BA2344BF1F66E97600EF8542 /* TabNavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344B91F66E97600EF8542 /* TabNavigationInteractor.swift */; };
 		BA2344C01F66E97600EF8542 /* TabNavigationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BA1F66E97600EF8542 /* TabNavigationModels.swift */; };
 		BA2344C11F66E97600EF8542 /* TabNavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */; };
@@ -136,6 +137,7 @@
 		BA074CCF1F6631F00003A064 /* ItemDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailPresenter.swift; sourceTree = "<group>"; };
 		BA074CD01F6631F00003A064 /* ItemDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailRouter.swift; sourceTree = "<group>"; };
 		BA074CD11F6631F00003A064 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		BA081A231F72C5B000B2B218 /* Deeplinking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplinking.swift; sourceTree = "<group>"; };
 		BA2344B91F66E97600EF8542 /* TabNavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationInteractor.swift; sourceTree = "<group>"; };
 		BA2344BA1F66E97600EF8542 /* TabNavigationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationModels.swift; sourceTree = "<group>"; };
 		BA2344BB1F66E97600EF8542 /* TabNavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationPresenter.swift; sourceTree = "<group>"; };
@@ -255,6 +257,14 @@
 				BA074CB31F6630DE0003A064 /* ItemDetailViewController.storyboard */,
 			);
 			path = ItemDetail;
+			sourceTree = "<group>";
+		};
+		BA081A221F72C58900B2B218 /* Deeplinking */ = {
+			isa = PBXGroup;
+			children = (
+				BA081A231F72C5B000B2B218 /* Deeplinking.swift */,
+			);
+			path = Deeplinking;
 			sourceTree = "<group>";
 		};
 		BA2344B81F66E92B00EF8542 /* TabMenu */ = {
@@ -507,6 +517,7 @@
 		BAD7FCDC1F65E38C00F31E49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BA081A221F72C58900B2B218 /* Deeplinking */,
 				BAD3E1401F65A475001CEA41 /* Root */,
 				BA2344B81F66E92B00EF8542 /* TabMenu */,
 				BAD3E1231F65106E001CEA41 /* List */,
@@ -803,6 +814,7 @@
 				BA2344BF1F66E97600EF8542 /* TabNavigationInteractor.swift in Sources */,
 				BAD3E11E1F650ABC001CEA41 /* LoginViewController.swift in Sources */,
 				BA2344C11F66E97600EF8542 /* TabNavigationPresenter.swift in Sources */,
+				BA081A241F72C5B000B2B218 /* Deeplinking.swift in Sources */,
 				BACFC46F1F67029400CA4517 /* TrackCollectionViewController.swift in Sources */,
 				BAD3E14B1F65A493001CEA41 /* RootViewController.swift in Sources */,
 				BACFC46D1F67029400CA4517 /* TrackCollectionPresenter.swift in Sources */,
