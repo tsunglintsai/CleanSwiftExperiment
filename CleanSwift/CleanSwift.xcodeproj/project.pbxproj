@@ -77,6 +77,7 @@
 		BADE1A5D1F675E4B00477879 /* ITunesFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADE1A561F675E4B00477879 /* ITunesFeed.framework */; };
 		BADE1A5E1F675E4B00477879 /* ITunesFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BADE1A561F675E4B00477879 /* ITunesFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BADE1A631F675EAA00477879 /* ITunesFeedAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADE1A621F675EAA00477879 /* ITunesFeedAPIProtocol.swift */; };
+		BAF3F71A1F9EE4AA008A6668 /* CleanSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF3F7191F9EE4AA008A6668 /* CleanSwiftTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BADE1A551F675E4B00477879;
 			remoteInfo = ITunesFeed;
+		};
+		BAF3F71C1F9EE4AA008A6668 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAD3E0F71F650A85001CEA41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAD3E0FE1F650A85001CEA41;
+			remoteInfo = CleanSwift;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -197,6 +205,9 @@
 		BADE1A581F675E4B00477879 /* ITunesFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITunesFeed.h; sourceTree = "<group>"; };
 		BADE1A591F675E4B00477879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADE1A621F675EAA00477879 /* ITunesFeedAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesFeedAPIProtocol.swift; sourceTree = "<group>"; };
+		BAF3F7171F9EE4AA008A6668 /* CleanSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF3F7191F9EE4AA008A6668 /* CleanSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftTests.swift; sourceTree = "<group>"; };
+		BAF3F71B1F9EE4AA008A6668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +247,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BADE1A521F675E4B00477879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF3F7141F9EE4AA008A6668 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,6 +448,7 @@
 				BADE1A2F1F67588D00477879 /* API */,
 				BADE1A571F675E4B00477879 /* ITunesFeed */,
 				BAC740EB1F679072000F50BF /* Persistence */,
+				BAF3F7181F9EE4AA008A6668 /* CleanSwiftTests */,
 				BAD3E1001F650A85001CEA41 /* Products */,
 				BAC740D61F678BFB000F50BF /* Frameworks */,
 			);
@@ -443,6 +462,7 @@
 				BADE1A2E1F67588D00477879 /* API.framework */,
 				BADE1A561F675E4B00477879 /* ITunesFeed.framework */,
 				BAC740EA1F679072000F50BF /* Persistence.framework */,
+				BAF3F7171F9EE4AA008A6668 /* CleanSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -550,6 +570,15 @@
 				BADE1A591F675E4B00477879 /* Info.plist */,
 			);
 			path = ITunesFeed;
+			sourceTree = "<group>";
+		};
+		BAF3F7181F9EE4AA008A6668 /* CleanSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAF3F7191F9EE4AA008A6668 /* CleanSwiftTests.swift */,
+				BAF3F71B1F9EE4AA008A6668 /* Info.plist */,
+			);
+			path = CleanSwiftTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -684,6 +713,24 @@
 			productReference = BADE1A561F675E4B00477879 /* ITunesFeed.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		BAF3F7161F9EE4AA008A6668 /* CleanSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAF3F7201F9EE4AA008A6668 /* Build configuration list for PBXNativeTarget "CleanSwiftTests" */;
+			buildPhases = (
+				BAF3F7131F9EE4AA008A6668 /* Sources */,
+				BAF3F7141F9EE4AA008A6668 /* Frameworks */,
+				BAF3F7151F9EE4AA008A6668 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAF3F71D1F9EE4AA008A6668 /* PBXTargetDependency */,
+			);
+			name = CleanSwiftTests;
+			productName = CleanSwiftTests;
+			productReference = BAF3F7171F9EE4AA008A6668 /* CleanSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -718,6 +765,11 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
+					BAF3F7161F9EE4AA008A6668 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BAD3E0FE1F650A85001CEA41;
+					};
 				};
 			};
 			buildConfigurationList = BAD3E0FA1F650A85001CEA41 /* Build configuration list for PBXProject "CleanSwift" */;
@@ -738,6 +790,7 @@
 				BADE1A2D1F67588D00477879 /* API */,
 				BADE1A551F675E4B00477879 /* ITunesFeed */,
 				BAC740E91F679072000F50BF /* Persistence */,
+				BAF3F7161F9EE4AA008A6668 /* CleanSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -778,6 +831,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BADE1A541F675E4B00477879 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF3F7151F9EE4AA008A6668 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -871,6 +931,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAF3F7131F9EE4AA008A6668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAF3F71A1F9EE4AA008A6668 /* CleanSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -893,6 +961,11 @@
 			isa = PBXTargetDependency;
 			target = BADE1A551F675E4B00477879 /* ITunesFeed */;
 			targetProxy = BADE1A5B1F675E4B00477879 /* PBXContainerItemProxy */;
+		};
+		BAF3F71D1F9EE4AA008A6668 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAD3E0FE1F650A85001CEA41 /* CleanSwift */;
+			targetProxy = BAF3F71C1F9EE4AA008A6668 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1251,6 +1324,38 @@
 			};
 			name = Release;
 		};
+		BAF3F71E1F9EE4AA008A6668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58LPDNEUG;
+				INFOPLIST_FILE = CleanSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Henry.CleanSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanSwift.app/CleanSwift";
+			};
+			name = Debug;
+		};
+		BAF3F71F1F9EE4AA008A6668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58LPDNEUG;
+				INFOPLIST_FILE = CleanSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Henry.CleanSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanSwift.app/CleanSwift";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1304,6 +1409,15 @@
 			buildConfigurations = (
 				BADE1A601F675E4B00477879 /* Debug */,
 				BADE1A611F675E4B00477879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAF3F7201F9EE4AA008A6668 /* Build configuration list for PBXNativeTarget "CleanSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAF3F71E1F9EE4AA008A6668 /* Debug */,
+				BAF3F71F1F9EE4AA008A6668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
